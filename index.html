@@ -13,14 +13,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
     <link rel="icon" href="images/icon.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
-    <script src="jquery.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <!-- <script src="jquery.min.js"></script> -->
 
 </head>
 
@@ -260,10 +266,10 @@
                                 predictors, even when those methods leverage additional sensors.</li>
 
                             <li><b>Vision-Based Legged Robot Policy</b>. We introduce the first <span
-                                    style="color: #669900;">single-stage
-                                    vision-based RL policy</span> for legged robots using LiDAR, offering robust
-                                performance.
-                                Our policy ensures safety in challenging environments, such as near glass, and excels at
+                                    style="color: #669900;">end-to-end vsion-based locomotion policy trained without teacher-student distillation</span>. 
+                                    By directly interacting with the environment using LiDAR during training, our approach significantly reduces the
+                                    sim-to-real gap.
+                                Our policy ensures safety in challenging environments, such as near transparency surfaces, and excels at
                                 traversing rough terrain.</li>
 
                             <li><b>VLN-CE-Isaac Benchmark</b>. We introduce a <span
@@ -351,41 +357,34 @@
             </div>
     </section>
 
-
     <section class="section">
         <div class="columns is-centered has-text-centered">
             <div class="column is-six-fifths">
                 <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    VLN-CE-Issac Vision vs Blind Policy</h2>
+                    VLN-CE-Isaac NaVILA-Go2-Vision Results</h2>
             </div>
         </div>
 
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <div class="content has-text-justified">
-                        <tr>
-                            <td>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/isaac/go2_compare_final.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                        <figcaption>
-                                            The vision-based policy performs better in Success Rate than the blind
-                                            policy
-                                            because it avoids obstacles more
-                                            effectively.
-                                        </figcaption>
-
-                                    </div>
-                                </div>
-                                <br>
-                            </td>
-                        </tr>
-                    </div>
+        <div class="container is-max-desktop has-text-centered">
+            <div id="results-carousel-teaser" class="carousel results-carousel">
+                <div class="item item-video2">
+                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/isaac/go2_vision_360.mp4" type="video/mp4">
+                    </video>
                 </div>
-            </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/isaac/go2_vision_359.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/isaac/go2_vision_234.mp4" type="video/mp4">
+                    </video>
+                </div>
+                </div>
+        </div>
+
     </section>
 
 
@@ -393,86 +392,67 @@
         <div class="columns is-centered has-text-centered">
             <div class="column is-six-fifths">
                 <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    VLN-CE-Issac NaVILA-Go2-Vision Results</h2>
+                    VLN-CE-Issac NaVILA-H1-Vision Results</h2>
             </div>
         </div>
 
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <div class="content has-text-justified">
-                        <tr>
-                            <td>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/isaac/go2_vision_234.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/isaac/go2_vision_359.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/isaac/go2_vision_360.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-
-                                <br>
-                            </td>
-                        </tr>
-                    </div>
+        <div class="container is-max-desktop has-text-centered">
+            <div id="results-carousel-teaser" class="carousel results-carousel">
+                <div class="item item-video2">
+                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/isaac/h1_vision_2.mp4" type="video/mp4">
+                    </video>
                 </div>
-            </div>
-    </section>
-
-
-    <section class="section">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-six-fifths">
-                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                    VLN-CE-Issac NaVILA-H1-Blind Results</h2>
-            </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/isaac/h1_vision_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/isaac/h1_vision_3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                </div>
         </div>
 
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <div class="content has-text-justified">
-                        <tr>
-                            <td>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/isaac/h1_blind_499.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/isaac/h1_blind_1650.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-
-                                <br>
-                            </td>
-                        </tr>
-                    </div>
-                </div>
-            </div>
     </section>
+
+
+<section class="section">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+            <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
+                VLN-CE-Issac Vision vs Blind Policy</h2>
+                </div>
+                </div>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <div class="content has-text-justified">
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <video playsinline autoplay loop muted controls
+                                        src="./videos/isaac/go2_compare_final.mp4" width="100%"
+                                        style="border-radius:10px; "></video>
+                                    <figcaption>
+                                        The vision-based policy performs better in Success Rate than the blind
+                                        policy
+                                        because it avoids obstacles more
+                                        effectively.
+                                    </figcaption>
+
+                                </div>
+                                </div>
+                            <br>
+                            </td>
+                            </tr>
+                            </div>
+                            </div>
+                            </div>
+                            </section>
 
 
     <section class="section">
@@ -483,67 +463,46 @@
             </div>
         </div>
 
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <div class="content has-text-justified">
-
-                        <tr>
-                            <td>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/R2R/episode=866.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/R2R/episode=283.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/R2R/episode=172.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/R2R/episode=115.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/R2R/episode=177.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/R2R/episode=275.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/R2R/episode=837.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-
-                                <br>
-                            </td>
-                        </tr>
-
-                    </div>
+        <div class="container is-max-desktop has-text-centered">
+            <div id="results-carousel-teaser" class="carousel results-carousel">
+                <div class="item item-video2">
+                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/R2R/episode=837.mp4" type="video/mp4">
+                    </video>
                 </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/R2R/episode=866.mp4" type="video/mp4">
+                    </video>
+                </div>
+        <div class="item item-video3">
+            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                <source src="./videos/R2R/episode=172.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="item item-video3">
+            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                <source src="./videos/R2R/episode=115.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="item item-video3">
+            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                <source src="./videos/R2R/episode=177.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="item item-video3">
+            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                <source src="./videos/R2R/episode=275.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="item item-video3">
+            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                <source src="./videos/R2R/episode=283.mp4" type="video/mp4">
+            </video>
+        </div>
             </div>
+            </div>
+
     </section>
 
 
@@ -555,52 +514,42 @@
             </div>
         </div>
 
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <div class="content has-text-justified">
+        <div class="container is-max-desktop has-text-centered">
+            <div id="results-carousel-teaser" class="carousel results-carousel">
+                <div class="item item-video2">
+                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/RxR/episode=6676.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/RxR/episode=594.mp4" type="video/mp4">
+                    </video>
+                </div>
 
-                        <tr>
-                            <td>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/RxR/episode=6676.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/RxR/episode=594.mp4" type="video/mp4">
+                    </video>
+                </div>
 
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/RxR/episode=594.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/RxR/episode=1602.mp4" type="video/mp4">
+                    </video>
+                </div>
 
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/RxR/episode=1602.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <video playsinline autoplay loop muted controls
-                                            src="./videos/RxR/episode=1101.mp4" width="100%"
-                                            style="border-radius:10px; "></video>
-                                    </div>
-                                </div>
-
-                                <br>
-                            </td>
-                        </tr>
-
-                    </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                        <source src="./videos/RxR/episode=1101.mp4" type="video/mp4">
+                    </video>
+                </div>
                 </div>
             </div>
+
     </section>
+
+
 
     <style>
         #BibTeX {
