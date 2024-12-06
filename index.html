@@ -33,13 +33,13 @@
 
 <style>
 
-        .video-container {
+        .video-gallery-hidden {
             display: none;
         }
-        .video-container.visible {
+        .video-gallery-visible {
             display: block;
         }
-        .show-more-btn {
+        .video-gallery-btn {
             display: block;
             margin: 20px auto;
             padding: 10px 20px;
@@ -49,16 +49,16 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .show-more-btn:hover {
+        .video-gallery-btn:hover {
             background-color: #363636;
         }
-        .row {
+        .video-gallery-row {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 10px;
         }
-        .col {
+        .video-gallery-col {
             flex: 1;
             min-width: 300px;
         }
@@ -347,76 +347,76 @@
                 <div class="column is-full-width">
                     <div class="content">
                         <!-- Initial visible videos (2 rows, 3 columns) -->
-                        <div class="row g-1">
-                            <div class="col px-1">
+                        <div class="video-gallery-row">
+                            <div class="video-gallery-col">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/go2/1_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
                             </div>
-                            <div class="col px-1">
+                            <div class="video-gallery-col">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/go2/2_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
                             </div>
-                            <div class="col px-1">
+                            <div class="video-gallery-col">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/go2/3_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
                             </div>
                         </div>
-                        <div class="row g-1">
-                            <div class="col px-1">
+                        <div class="video-gallery-row">
+                            <div class="video-gallery-col">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/go2/4_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
                             </div>
-                            <div class="col px-1">
+                            <div class="video-gallery-col">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/go2/5_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
-                                </div>
-                                <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/6_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
-                                </div>
+                            </div>
+                            <div class="video-gallery-col">
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/6_1.mp4" width="100%"
+                                    style="border-radius:10px;"></video>
+                            </div>
                                 </div>
                         <!-- Hidden videos that will be shown later -->
-                        <div class="video-container" id="moreVideos">
+                        <div class="video-gallery-hidden" id="videoGalleryMore">
                             <!-- Additional rows can be added here -->
-                            <div class="row g-1">
-                                <div class="col px-1">
+                            <div class="video-gallery-row">
+                                <div class="video-gallery-col">
                                     <video playsinline autoplay loop muted controls src="./videos/Real/go2/7_1.mp4" width="100%"
                                         style="border-radius:10px;"></video>
                                 </div>
-                                <div class="col px-1">
+                                <div class="video-gallery-col">
                                     <video playsinline autoplay loop muted controls src="./videos/Real/go2/8_1.mp4" width="100%"
                                         style="border-radius:10px;"></video>
                                 </div>
-                                <div class="col px-1">
+                                <div class="video-gallery-col">
                                     <video playsinline autoplay loop muted controls src="./videos/Real/go2/9_1.mp4" width="100%"
                                         style="border-radius:10px;"></video>
                                 </div>
                             </div>
     
-                            <div class="row g-1">
-                                <div class="col px-1">
+                            <div class="video-gallery-row">
+                                <div class="video-gallery-col">
                                     <video playsinline autoplay loop muted controls src="./videos/Real/go2/10_1.mp4" width="100%"
                                         style="border-radius:10px;"></video>
                                     </div>
-                                    <div class="col px-1">
+                                    <div class="video-gallery-col">
                                     <video playsinline autoplay loop muted controls src="./videos/Real/go2/11_1.mp4" width="100%"
                                         style="border-radius:10px;"></video>
                                     </div>
-                                    <div class="col px-1">
+                                    <div class="video-gallery-col">
                                     <video playsinline autoplay loop muted controls src="./videos/Real/go2/12_1.mp4" width="100%"
                                         style="border-radius:10px;"></video>
                                     </div>
                             </div>
-    <div class="row g-1">
-        <div class="col px-1">
-            <video playsinline autoplay loop muted controls src="./videos/Real/go2/13_1.mp4" width="100%"
-                style="border-radius:10px;"></video>
-        </div>
-                                    <div class="col px-1">
+                            <div class="video-gallery-row">
+                                <div class="video-gallery-col">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/13_1.mp4" width="100%"
+                                        style="border-radius:10px;"></video>
+                                </div>
+                                    <div class="video-gallery-col">
                                         <video playsinline autoplay loop muted controls src="./videos/Real/go2/14_1.mp4" width="100%"
                                             style="border-radius:10px;"></video>
                                         </div>
-                                    <div class="col px-1">
+                                    <div class="video-gallery-col">
                                         <video playsinline autoplay loop muted controls src="./videos/Real/go2/15_1.mp4" width="100%"
                                             style="border-radius:10px;"></video>
                                     </div>
@@ -424,7 +424,7 @@
     
                             <!-- Add more rows as needed -->
                             </div>
-                        <button class="show-more-btn" onclick="toggleVideos()">Show More</button>
+                        <button class="video-gallery-btn" onclick="toggleGalleryVideos()">Show More</button>
                         </div>
                         </div>
                         </div>
@@ -447,6 +447,12 @@
                                         <div class="content">
 
                     <div class="row g-1">
+                        <div class="col px-1">
+                            <video playsinline autoplay loop muted controls src="./videos/Real/g1/2.mp4" width="100%"
+                                style="border-radius:10px;"></video>
+                        </div>
+                    </div>
+                    <div class="row g-1">
                             <div class="col px-1">
                             <video playsinline autoplay loop muted controls src="./videos/Real/g1/1.mp4" width="100%"
                                 style="border-radius:10px;"></video>
@@ -457,10 +463,6 @@
                             </div>
                             <div class="col px-1">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/g1/3.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
-                            </div>
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/2.mp4" width="100%"
                                     style="border-radius:10px;"></video>
                             </div>
                     </div>
@@ -774,17 +776,18 @@
 
 
     <script>
-        function toggleVideos() {
-            const moreVideos = document.getElementById('moreVideos');
-            const btn = document.querySelector('.show-more-btn');
+        function toggleGalleryVideos() {
+            const moreVi                                      cum                                video-gallery-btn');
 
-            if (moreVideos.classList.contains('visible')) {
-                moreVideos.classList.remove('visible');
+              s('video-gallery-visible')) {
+                moreVideos.classList.remove('            sible');
+                moreVideos.classList.add('video-gallery-hidden');
                 btn.textContent = 'Show More';
                 // Pause hidden videos to save resources
                 moreVideos.querySelectorAll('video').forEach(video => video.pause());
             } else {
-                moreVideos.classList.add('visible');
+                moreVideos.classList.remove('video-gallery-hidden');
+                moreVideos.classList.add('video-gallery-visible');
                 btn.textContent = 'Show Less';
             }
         }
