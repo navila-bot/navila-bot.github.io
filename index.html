@@ -424,7 +424,8 @@
     
                             <!-- Add more rows as needed -->
                             </div>
-                        <button class="video-gallery-btn" onclick="toggleGalleryVideos()">Show More</button>
+<button class="video-gallery-btn" onclick="toggleGalleryVideos()"> <i class="fas fa-dog" id="galleryIcon"></i>
+    <span id="galleryBtnText">Show More</span> </button>
                         </div>
                         </div>
                         </div>
@@ -773,44 +774,63 @@
 
 
     </div>
+<script>
+    function toggleGalleryVideos() {
+        const moreVideos = document.getElementById('videoGalleryMore');
+        const icon = document.getElementById('galleryIcon');
+        const text = document.getElementById('galleryBtnText');
 
-
-    <script>
-        function toggleGalleryVideos() {
-            const moreVi                                      cum                                video-gallery-btn');
-
-              s('video-gallery-visible')) {
-                moreVideos.classList.remove('            sible');
-                moreVideos.classList.add('video-gallery-hidden');
-                btn.textContent = 'Show More';
-                // Pause hidden videos to save resources
-                moreVideos.querySelectorAll('video').forEach(video => video.pause());
-            } else {
-                moreVideos.classList.remove('video-gallery-hidden');
-                moreVideos.classList.add('video-gallery-visible');
-                btn.textContent = 'Show Less';
-            }
+        if (moreVideos.style.display === 'block') {
+            // Collapse
+            moreVideos.style.display = 'none';
+            text.innerHTML = 'Show More';
+            icon.className = 'fas fa-chevron-down';
+            // Pause hidden videos to save resources
+            moreVideos.querySelectorAll('video').forEach(video => video.pause());
+        } else {
+            // Expand
+            moreVideos.style.display = 'block';
+            text.innerHTML = 'Show Less';
+            icon.className = 'fas fa-dog';
+            // Play newly visible videos
+            moreVideos.querySelectorAll('video').forEach(video => {
+                video.play().catch(e => console.log("Autoplay prevented:", e));
+            });
         }
+    }
 
-        // Pause videos when they're hidden
+                    // Handle video visibility
         document.addEventListener('DOMContentLoaded', function () {
+            // Initially hide the "more videos" section
+            const moreVideos = document.getElementById('videoGalleryMore');
+            moreVideos.style.display = 'none';
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.target.tagName === 'VIDEO') {
-                        if (!entry.isIntersecting) {
+                        if (entry.isIntersecting) {
+                            // Play video when it becomes visible
+                            entry.target.play().catch(e => {
+                                console.log("Autoplay prevented:", e);
+                            });
+                        } else {
+                        // Pause when out of view
                             entry.target.pause();
                         }
                     }
                 });
             });
 
-            // Observe all videos
+            // Start observing all videos
             document.querySelectorAll('video').forEach(video => {
                 observer.observe(video);
+                // If video is currently visible, play it
+                if (video.getBoundingClientRect().top < window.innerHeight) {
+                    video.play().catch(e => console.log("Initial autoplay prevented:", e));
+                }
             });
         });
-    </script>
-
+</script>
 </body>
 
 </html>
