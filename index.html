@@ -33,6 +33,36 @@
 
 <style>
 
+        .video-container {
+            display: none;
+        }
+        .video-container.visible {
+            display: block;
+        }
+        .show-more-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-more-btn:hover {
+            background-color: #363636;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .col {
+            flex: 1;
+            min-width: 300px;
+        }
+
     .section {
         margin-bottom: -30px;
         /* Adjust this value as needed to reduce the space */
@@ -302,114 +332,138 @@
         </div>
     </section>
 
-<section class="section">
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
-            <h2 class="title is-3">
-                <img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                Results: Real-world Environments
-            </h2>
+    <section class="section">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-six-fifths">
+                <h2 class="title is-3">
+                    <img src="images/icon.png" width="50" style="vertical-align: bottom;">
+                    Real-world Results: Unitree Go2
+                    </h2>
             </div>
-            </div>
-
-    <div class="container is-max-desktop" style="max-width: 1200px;">
-        <div class="columns is-centered">
-            <div class="column is-full-width">
-                <div class="content">
-
-                    <div class="row g-1">
+        </div>
+        
+        <div class="container is-max-desktop" style="max-width: 1200px;">
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <div class="content">
+                        <!-- Initial visible videos (2 rows, 3 columns) -->
+                        <div class="row g-1">
                             <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/go2/1_1.mp4" width="100%"
-                                style="border-radius:10px;"></video>
-                            </div>
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/1.mp4" width="100%"
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/1_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
                             </div>
                             <div class="col px-1">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/go2/2_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
                             </div>
-                            </div>
-                            
-                            <div class="row g-1">
-                                <div class="col px-1">
+                            <div class="col px-1">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/go2/3_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
+                            </div>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col px-1">
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/4_1.mp4" width="100%"
+                                    style="border-radius:10px;"></video>
+                            </div>
+                            <div class="col px-1">
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/5_1.mp4" width="100%"
+                                    style="border-radius:10px;"></video>
+                                </div>
+                                <div class="col px-1">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/6_1.mp4" width="100%"
+                                        style="border-radius:10px;"></video>
+                                </div>
+                                </div>
+                        <!-- Hidden videos that will be shown later -->
+                        <div class="video-container" id="moreVideos">
+                            <!-- Additional rows can be added here -->
+                            <div class="row g-1">
+                                <div class="col px-1">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/7_1.mp4" width="100%"
+                                        style="border-radius:10px;"></video>
                                 </div>
                                 <div class="col px-1">
                                     <video playsinline autoplay loop muted controls src="./videos/Real/go2/8_1.mp4" width="100%"
                                         style="border-radius:10px;"></video>
                                 </div>
                                 <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/6_1.mp4" width="100%"
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/9_1.mp4" width="100%"
                                         style="border-radius:10px;"></video>
                                 </div>
                             </div>
-                            
-                            <div class="row g-1">
-                                <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/g1/2.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
-                                </div>
-
-                                <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/7_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
-                                </div>
-                                <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/5_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
-                                </div>
-                            </div>
-                            
+    
                             <div class="row g-1">
                                 <div class="col px-1">
                                     <video playsinline autoplay loop muted controls src="./videos/Real/go2/10_1.mp4" width="100%"
+                                        style="border-radius:10px;"></video>
+                                    </div>
+                                    <div class="col px-1">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/11_1.mp4" width="100%"
+                                        style="border-radius:10px;"></video>
+                                    </div>
+                                    <div class="col px-1">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/12_1.mp4" width="100%"
+                                        style="border-radius:10px;"></video>
+                                    </div>
+                            </div>
+    <div class="row g-1">
+        <div class="col px-1">
+            <video playsinline autoplay loop muted controls src="./videos/Real/go2/13_1.mp4" width="100%"
+                style="border-radius:10px;"></video>
+        </div>
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="./videos/Real/go2/14_1.mp4" width="100%"
+                                            style="border-radius:10px;"></video>
+                                        </div>
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="./videos/Real/go2/15_1.mp4" width="100%"
+                                            style="border-radius:10px;"></video>
+                                    </div>
+                            </div>
+    
+                            <!-- Add more rows as needed -->
+                            </div>
+                        <button class="show-more-btn" onclick="toggleVideos()">Show More</button>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </section>
+                        
+                        <section class="section">
+                            <div class="columns is-centered has-text-centered">
+                                <div class="column is-six-fifths">
+                                    <h2 class="title is-3">
+                                        <img src="images/icon.png" width="50" style="vertical-align: bottom;">
+                                        Real-world Results: Unitree G1
+                                    </h2>
+                                </div>
+                            </div>
+                        
+                            <div class="container is-max-desktop" style="max-width: 1200px;">
+                                <div class="columns is-centered">
+                                    <div class="column is-full-width">
+                                        <div class="content">
+
+                    <div class="row g-1">
+                            <div class="col px-1">
+                            <video playsinline autoplay loop muted controls src="./videos/Real/g1/1.mp4" width="100%"
                                 style="border-radius:10px;"></video>
                             </div>
                             <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/go2/11_1.mp4" width="100%"
-                                style="border-radius:10px;"></video>
-                            </div>
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/12_1.mp4" width="100%"
+                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/4_1.mp4" width="100%"
                                     style="border-radius:10px;"></video>
-                            </div>
-                            </div>
-
-                    <div class="row g-1">
-                        <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/go2/13_1.mp4" width="100%"
-                                style="border-radius:10px;"></video>
-                            </div>
-
-                            <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/go2/9_1.mp4" width="100%"
-                                style="border-radius:10px;"></video>
-                            </div>
-
-                            <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/go2/4_1.mp4" width="100%"
-                                style="border-radius:10px;"></video>
-                            </div>
-
-                            </div>
-
-                    <div class="row g-1">
-                        <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/go2/14_1.mp4" width="100%"
-                                style="border-radius:10px;"></video>
-                            </div>
-                            <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/go2/15_1.mp4" width="100%"
-                                style="border-radius:10px;"></video>
                             </div>
                             <div class="col px-1">
                                 <video playsinline autoplay loop muted controls src="./videos/Real/g1/3.mp4" width="100%"
                                     style="border-radius:10px;"></video>
                             </div>
+                            <div class="col px-1">
+                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/2.mp4" width="100%"
+                                    style="border-radius:10px;"></video>
                             </div>
+                    </div>
                 </div>
                 </div>
                 </div>
@@ -718,6 +772,41 @@
 
     </div>
 
+
+    <script>
+        function toggleVideos() {
+            const moreVideos = document.getElementById('moreVideos');
+            const btn = document.querySelector('.show-more-btn');
+
+            if (moreVideos.classList.contains('visible')) {
+                moreVideos.classList.remove('visible');
+                btn.textContent = 'Show More';
+                // Pause hidden videos to save resources
+                moreVideos.querySelectorAll('video').forEach(video => video.pause());
+            } else {
+                moreVideos.classList.add('visible');
+                btn.textContent = 'Show Less';
+            }
+        }
+
+        // Pause videos when they're hidden
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.target.tagName === 'VIDEO') {
+                        if (!entry.isIntersecting) {
+                            entry.target.pause();
+                        }
+                    }
+                });
+            });
+
+            // Observe all videos
+            document.querySelectorAll('video').forEach(video => {
+                observer.observe(video);
+            });
+        });
+    </script>
 
 </body>
 
