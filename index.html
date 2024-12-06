@@ -376,96 +376,25 @@
                 </h2>
             </div>
         </div>
-
         <div class="container is-max-desktop" style="max-width: 1200px;">
             <div class="columns is-centered">
+        
                 <div class="column is-full-width">
-                    <div class="content">
-                        <!-- Initial visible videos (2 rows, 3 columns) -->
-                        <div class="video-gallery-row">
-                            <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/1_1.mp4"
-                                    width="100%" style="border-radius:10px;"></video>
-                            </div>
-                            <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/2_1.mp4"
-                                    width="100%" style="border-radius:10px;"></video>
-                            </div>
-                            <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/3_1.mp4"
-                                    width="100%" style="border-radius:10px;"></video>
-                            </div>
-                        </div>
-                        <div class="video-gallery-row">
-                            <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/4_1.mp4"
-                                    width="100%" style="border-radius:10px;"></video>
-                            </div>
-                            <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/5_1.mp4"
-                                    width="100%" style="border-radius:10px;"></video>
-                            </div>
-                            <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/6_1.mp4"
-                                    width="100%" style="border-radius:10px;"></video>
-                            </div>
-                        </div>
-                        <!-- Hidden videos that will be shown later -->
-                        <div class="video-gallery-hidden" id="videoGalleryMore">
-                            <!-- Additional rows can be added here -->
-                            <div class="video-gallery-row">
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/7_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
+                    <div class="content has-text-justified">
+                        <tr>
+                            <td>
+                                <div class="row g-1">
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/Real/output_grid_1.mp4"
+                                            width="100%"></video>
+                                    </div>
                                 </div>
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/8_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
+                                <br>
+                                </td>
+                                </tr>
                                 </div>
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/9_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
                                 </div>
-                            </div>
-
-                            <div class="video-gallery-row">
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/10_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
                                 </div>
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/11_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
-                                </div>
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/12_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
-                                </div>
-                            </div>
-                            <div class="video-gallery-row">
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/13_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
-                                </div>
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/14_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
-                                </div>
-                                <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/15_1.mp4"
-                                        width="100%" style="border-radius:10px;"></video>
-                                </div>
-                            </div>
-
-                            <!-- Add more rows as needed -->
-                        </div>
-                        <button class="video-gallery-btn" onclick="toggleGalleryVideos()"> <i class="fas fa-dog"
-                                id="galleryIcon"></i>
-                            <span id="galleryBtnText">Show More</span> </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="section">
@@ -519,7 +448,7 @@
             </div>
         </div>
         <div class="columns is-centered has-text-centered">
-            <video src="videos/method/pipeline.m4v" width="900" autoplay muted loop> </video>
+            <video src="videos/method/pipeline.mp4" width="900" autoplay muted loop> </video>
         </div>
 
         <div class="container is-max-desktop" style="max-width: 1200px;">
@@ -559,17 +488,17 @@
         <div class="container is-max-desktop has-text-centered">
             <div id="results-carousel-teaser" class="carousel results-carousel">
                 <div class="item item-video2">
-                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/isaac/go2_vision_360.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/isaac/go2_vision_359.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/isaac/go2_vision_234.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -590,17 +519,17 @@
         <div class="container is-max-desktop has-text-centered">
             <div id="results-carousel-teaser" class="carousel results-carousel">
                 <div class="item item-video2">
-                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/isaac/h1_vision_2.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/isaac/h1_vision_1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/isaac/h1_vision_3.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -657,37 +586,37 @@
         <div class="container is-max-desktop has-text-centered">
             <div id="results-carousel-teaser" class="carousel results-carousel">
                 <div class="item item-video2">
-                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/R2R/episode=837.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/R2R/episode=866.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/R2R/episode=172.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/R2R/episode=115.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/R2R/episode=177.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/R2R/episode=275.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/R2R/episode=283.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -708,30 +637,30 @@
         <div class="container is-max-desktop has-text-centered">
             <div id="results-carousel-teaser" class="carousel results-carousel">
                 <div class="item item-video2">
-                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video10" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/RxR/episode=6676.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/RxR/episode=594.mp4" type="video/mp4">
                     </video>
                 </div>
 
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/RxR/episode=594.mp4" type="video/mp4">
                     </video>
                 </div>
 
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/RxR/episode=1602.mp4" type="video/mp4">
                     </video>
                 </div>
 
                 <div class="item item-video3">
-                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%">
+                    <video poster="" id="video11" loop autoplay playsinline controls muted height="100%" style="border-radius:10px;">
                         <source src="./videos/RxR/episode=1101.mp4" type="video/mp4">
                     </video>
                 </div>
