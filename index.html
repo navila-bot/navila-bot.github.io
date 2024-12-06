@@ -32,36 +32,40 @@
 
 
 <style>
+    .video-gallery-hidden {
+        display: none;
+    }
 
-        .video-gallery-hidden {
-            display: none;
-        }
-        .video-gallery-visible {
-            display: block;
-        }
-        .video-gallery-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #4a4a4a;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .video-gallery-btn:hover {
-            background-color: #363636;
-        }
-        .video-gallery-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        .video-gallery-col {
-            flex: 1;
-            min-width: 300px;
-        }
+    .video-gallery-visible {
+        display: block;
+    }
+
+    .video-gallery-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #4a4a4a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .video-gallery-btn:hover {
+        background-color: #363636;
+    }
+
+    .video-gallery-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .video-gallery-col {
+        flex: 1;
+        min-width: 300px;
+    }
 
     .section {
         margin-bottom: -30px;
@@ -150,9 +154,9 @@
     }
 
     .hero-body {
-    padding-bottom: 0rem;  /* Adjust this value as needed */
-}
-
+        padding-bottom: 0rem;
+        /* Adjust this value as needed */
+    }
 </style>
 
 <body>
@@ -260,33 +264,33 @@
                                     </a>
                                 </span>
                             </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section" style="padding-top: 0.5rem; padding-bottom: 4rem;">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column">
-                <div style="position:relative;padding-top:56.25%;">
-                    <iframe src="https://www.youtube.com/embed/2SEyXfzmHNg?si=z7J9UK_KJ0juRYJi?modestbranding=1" allowfullscreen
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                    </iframe>
-                </div>
-                <div style="margin-top: 0.5rem;">
-                    <h3 class="title is-5" style="margin-bottom: 0.75rem;">TL;DR</h3>
-                    <p class="has-text-justified" style="font-weight: 600; font-size: 0.95rem;">
-                        NaVILA is a two-level framework that combines VLAs with locomotion skills for navigation. It
-                        generates high-level language-based commands, while a real-time locomotion policy ensures
-                        obstacle avoidance.
-                    </p>
+    <section class="section" style="padding-top: 0.5rem; padding-bottom: 4rem;">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/2SEyXfzmHNg?si=z7J9UK_KJ0juRYJi?modestbranding=1"
+                            allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        </iframe>
+                    </div>
+                    <div style="margin-top: 0.5rem;">
+                        <h3 class="title is-5" style="margin-bottom: 0.75rem;">TL;DR</h3>
+                        <p class="has-text-justified" style="font-weight: 600; font-size: 0.95rem;">
+                            NaVILA is a two-level framework that combines VLAs with locomotion skills for navigation. It
+                            generates high-level language-based commands, while a real-time locomotion policy ensures
+                            obstacle avoidance.
+                        </p>
+                    </div>
                 </div>
             </div>
-            </div>
-    </div>
+        </div>
     </section>
 
     <section class="section" style="background-color:#efeff081">
@@ -305,10 +309,13 @@
                                 predictors, even when those methods leverage additional sensors.</li>
 
                             <li><b>Vision-Based Legged Robot Policy</b>. We introduce the first <span
-                                    style="color: #669900;">end-to-end vsion-based locomotion policy trained without teacher-student distillation</span>. 
-                                    By directly interacting with the environment using LiDAR during training, our approach significantly reduces the
-                                    sim-to-real gap.
-                                Our policy ensures safety in challenging environments, such as near transparency surfaces, and excels at
+                                    style="color: #669900;">end-to-end vsion-based locomotion policy trained without
+                                    teacher-student distillation</span>.
+                                By directly interacting with the environment using LiDAR during training, our approach
+                                significantly reduces the
+                                sim-to-real gap.
+                                Our policy ensures safety in challenging environments, such as near transparency
+                                surfaces, and excels at
                                 traversing rough terrain.</li>
 
                             <li><b>VLN-CE-Isaac Benchmark</b>. We introduce a <span
@@ -338,10 +345,10 @@
                 <h2 class="title is-3">
                     <img src="images/icon.png" width="50" style="vertical-align: bottom;">
                     Real-world Results: Unitree Go2
-                    </h2>
+                </h2>
             </div>
         </div>
-        
+
         <div class="container is-max-desktop" style="max-width: 1200px;">
             <div class="columns is-centered">
                 <div class="column is-full-width">
@@ -349,205 +356,206 @@
                         <!-- Initial visible videos (2 rows, 3 columns) -->
                         <div class="video-gallery-row">
                             <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/1_1.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/1_1.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
                             </div>
                             <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/2_1.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/2_1.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
                             </div>
                             <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/3_1.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/3_1.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
                             </div>
                         </div>
                         <div class="video-gallery-row">
                             <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/4_1.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/4_1.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
                             </div>
                             <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/5_1.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/5_1.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
                             </div>
                             <div class="video-gallery-col">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/6_1.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
+                                <video playsinline autoplay loop muted controls src="./videos/Real/go2/6_1.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
                             </div>
-                                </div>
+                        </div>
                         <!-- Hidden videos that will be shown later -->
                         <div class="video-gallery-hidden" id="videoGalleryMore">
                             <!-- Additional rows can be added here -->
                             <div class="video-gallery-row">
                                 <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/7_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/7_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
                                 </div>
                                 <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/8_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/8_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
                                 </div>
                                 <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/9_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/9_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
                                 </div>
                             </div>
-    
+
                             <div class="video-gallery-row">
                                 <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/10_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
-                                    </div>
-                                    <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/11_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
-                                    </div>
-                                    <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/12_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
-                                    </div>
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/10_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
+                                </div>
+                                <div class="video-gallery-col">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/11_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
+                                </div>
+                                <div class="video-gallery-col">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/12_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
+                                </div>
                             </div>
                             <div class="video-gallery-row">
                                 <div class="video-gallery-col">
-                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/13_1.mp4" width="100%"
-                                        style="border-radius:10px;"></video>
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/13_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
                                 </div>
-                                    <div class="video-gallery-col">
-                                        <video playsinline autoplay loop muted controls src="./videos/Real/go2/14_1.mp4" width="100%"
-                                            style="border-radius:10px;"></video>
-                                        </div>
-                                    <div class="video-gallery-col">
-                                        <video playsinline autoplay loop muted controls src="./videos/Real/go2/15_1.mp4" width="100%"
-                                            style="border-radius:10px;"></video>
-                                    </div>
+                                <div class="video-gallery-col">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/14_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
+                                </div>
+                                <div class="video-gallery-col">
+                                    <video playsinline autoplay loop muted controls src="./videos/Real/go2/15_1.mp4"
+                                        width="100%" style="border-radius:10px;"></video>
+                                </div>
                             </div>
-    
+
                             <!-- Add more rows as needed -->
-                            </div>
-<button class="video-gallery-btn" onclick="toggleGalleryVideos()"> <i class="fas fa-dog" id="galleryIcon"></i>
-    <span id="galleryBtnText">Show More</span> </button>
                         </div>
-                        </div>
-                        </div>
-                        </div>
-                        </section>
-                        
-                        <section class="section">
-                            <div class="columns is-centered has-text-centered">
-                                <div class="column is-six-fifths">
-                                    <h2 class="title is-3">
-                                        <img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                                        Real-world Results: Unitree G1
-                                    </h2>
-                                </div>
-                            </div>
-                        
-                            <div class="container is-max-desktop" style="max-width: 1200px;">
-                                <div class="columns is-centered">
-                                    <div class="column is-full-width">
-                                        <div class="content">
-
-                    <div class="row g-1">
-                        <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/g1/2.mp4" width="100%"
-                                style="border-radius:10px;"></video>
-                        </div>
-                    </div>
-                    <div class="row g-1">
-                            <div class="col px-1">
-                            <video playsinline autoplay loop muted controls src="./videos/Real/g1/1.mp4" width="100%"
-                                style="border-radius:10px;"></video>
-                            </div>
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/4_1.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
-                            </div>
-                            <div class="col px-1">
-                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/3.mp4" width="100%"
-                                    style="border-radius:10px;"></video>
-                            </div>
+                        <button class="video-gallery-btn" onclick="toggleGalleryVideos()"> <i class="fas fa-dog"
+                                id="galleryIcon"></i>
+                            <span id="galleryBtnText">Show More</span> </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-six-fifths">
+                <h2 class="title is-3">
+                    <img src="images/icon.png" width="50" style="vertical-align: bottom;">
+                    Real-world Results: Unitree G1
+                </h2>
+            </div>
+        </div>
+
+        <div class="container is-max-desktop" style="max-width: 1200px;">
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <div class="content">
+
+                        <div class="row g-1">
+                            <div class="col px-1">
+                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/2.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
+                            </div>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col px-1">
+                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/1.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
+                            </div>
+                            <div class="col px-1">
+                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/4_1.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
+                            </div>
+                            <div class="col px-1">
+                                <video playsinline autoplay loop muted controls src="./videos/Real/g1/3.mp4"
+                                    width="100%" style="border-radius:10px;"></video>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                </div>
-                </section>
+            </div>
+        </div>
+    </section>
 
 
 
-<section class="section">
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
-            <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                Learning from YouTube Human Touring Videos</h2>
-                </div>
-                </div>
+    <section class="section">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-six-fifths">
+                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
+                    Learning from YouTube Human Touring Videos</h2>
+            </div>
+        </div>
         <div class="columns is-centered has-text-centered">
             <video src="videos/method/pipeline.m4v" width="900" autoplay muted loop> </video>
         </div>
 
-    <div class="container is-max-desktop" style="max-width: 1200px;">
-        <div class="columns is-centered">
-            
-            <div class="column is-full-width">
-                <div class="content has-text-justified">
-                
-                    <tr>
-                        <td>
-                            <div class="row g-1">
-                                <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="videos/human/1.mp4" width="100%"
-                                        style="border-radius:2px; "></video>
-                                    </div>
-                                    <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="videos/human/2.mp4" width="100%"
-                                        style="border-radius:2px; "></video>
-                                    </div>
-                                    <div class="col px-1">
-                                        <video playsinline autoplay loop muted controls src="videos/human/3.mp4" width="100%"
-                                            style="border-radius:2px; "></video>
-                                    </div>
-                                    <div class="col px-1">
-                                        <video playsinline autoplay loop muted controls src="videos/human/4.mp4" width="100%"
-                                            style="border-radius:2px; "></video>
-                                    </div>
-                                    <div class="col px-1">
-                                        <video playsinline autoplay loop muted controls src="videos/human/5.mp4" width="100%"
-                                            style="border-radius:2px; "></video>
-                                    </div>
-                                    </div>
+        <div class="container is-max-desktop" style="max-width: 1200px;">
+            <div class="columns is-centered">
 
-                            <div class="row g-1">
-                                <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="videos/human/6.mp4" width="100%"
-                                        style="border-radius:2px; "></video>
+                <div class="column is-full-width">
+                    <div class="content has-text-justified">
+
+                        <tr>
+                            <td>
+                                <div class="row g-1">
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/human/1.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
                                     </div>
                                     <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="videos/human/7.mp4" width="100%"
-                                        style="border-radius:2px; "></video>
+                                        <video playsinline autoplay loop muted controls src="videos/human/2.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
                                     </div>
-                                <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="videos/human/8.mp4" width="100%"
-                                        style="border-radius:2px; "></video>
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/human/3.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
+                                    </div>
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/human/4.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
+                                    </div>
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/human/5.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
+                                    </div>
                                 </div>
-                                <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="videos/human/9.mp4" width="100%"
-                                        style="border-radius:2px; "></video>
+
+                                <div class="row g-1">
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/human/6.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
                                     </div>
                                     <div class="col px-1">
-                                    <video playsinline autoplay loop muted controls src="videos/human/10.mp4" width="100%"
-                                        style="border-radius:2px; "></video>
+                                        <video playsinline autoplay loop muted controls src="videos/human/7.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
                                     </div>
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/human/8.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
                                     </div>
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/human/9.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
+                                    </div>
+                                    <div class="col px-1">
+                                        <video playsinline autoplay loop muted controls src="videos/human/10.mp4"
+                                            width="100%" style="border-radius:2px; "></video>
+                                    </div>
+                                </div>
 
-                            <br>
+                                <br>
                             </td>
-                            </tr>
+                        </tr>
 
+                    </div>
                 </div>
-                </div>
-                </div>
-                </section>
+            </div>
+    </section>
 
 
 
@@ -576,7 +584,7 @@
                         <source src="./videos/isaac/go2_vision_234.mp4" type="video/mp4">
                     </video>
                 </div>
-                </div>
+            </div>
         </div>
 
     </section>
@@ -607,46 +615,46 @@
                         <source src="./videos/isaac/h1_vision_3.mp4" type="video/mp4">
                     </video>
                 </div>
-                </div>
+            </div>
         </div>
 
     </section>
 
 
-<section class="section">
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
-            <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
-                Results: VLN-CE-Issac Vision vs Blind Policy</h2>
-                </div>
-                </div>
-    <div class="container is-max-desktop">
-        <div class="columns is-centered">
-            <div class="column is-full-width">
-                <div class="content has-text-justified">
-                    <tr>
-                        <td>
-                            <div class="row">
-                                <div class="col">
-                                    <video playsinline autoplay loop muted controls
-                                        src="./videos/isaac/go2_compare_final.mp4" width="100%"
-                                        style="border-radius:10px; "></video>
-                                    <figcaption>
-                                        The vision-based policy performs better in Success Rate than the blind
-                                        policy
-                                        because it avoids obstacles more
-                                        effectively.
-                                    </figcaption>
+    <section class="section">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-six-fifths">
+                <h2 class="title is-3"><img src="images/icon.png" width="50" style="vertical-align: bottom;">
+                    Results: VLN-CE-Issac Vision vs Blind Policy</h2>
+            </div>
+        </div>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <div class="content has-text-justified">
+                        <tr>
+                            <td>
+                                <div class="row">
+                                    <div class="col">
+                                        <video playsinline autoplay loop muted controls
+                                            src="./videos/isaac/go2_compare_final.mp4" width="100%"
+                                            style="border-radius:10px; "></video>
+                                        <figcaption>
+                                            The vision-based policy performs better in Success Rate than the blind
+                                            policy
+                                            because it avoids obstacles more
+                                            effectively.
+                                        </figcaption>
 
+                                    </div>
                                 </div>
-                                </div>
-                            <br>
+                                <br>
                             </td>
-                            </tr>
-                            </div>
-                            </div>
-                            </div>
-                            </section>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+    </section>
 
 
     <section class="section">
@@ -669,33 +677,33 @@
                         <source src="./videos/R2R/episode=866.mp4" type="video/mp4">
                     </video>
                 </div>
-        <div class="item item-video3">
-            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
-                <source src="./videos/R2R/episode=172.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="item item-video3">
-            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
-                <source src="./videos/R2R/episode=115.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="item item-video3">
-            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
-                <source src="./videos/R2R/episode=177.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="item item-video3">
-            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
-                <source src="./videos/R2R/episode=275.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="item item-video3">
-            <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
-                <source src="./videos/R2R/episode=283.mp4" type="video/mp4">
-            </video>
-        </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                        <source src="./videos/R2R/episode=172.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                        <source src="./videos/R2R/episode=115.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                        <source src="./videos/R2R/episode=177.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                        <source src="./videos/R2R/episode=275.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-video3">
+                    <video poster="" id="video11" autoplay loop playsinline controls muted height="100%">
+                        <source src="./videos/R2R/episode=283.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
-            </div>
+        </div>
 
     </section>
 
@@ -738,10 +746,10 @@
                         <source src="./videos/RxR/episode=1101.mp4" type="video/mp4">
                     </video>
                 </div>
-                </div>
             </div>
+        </div>
     </section>
-    
+
 
 
 
@@ -762,44 +770,45 @@
         <div class="container is-max-desktop content">
             <h2 class="title">Citation</h2>
             <pre><code>
-  @inproceedings{,
-          title={},
-          author={},
-          booktitle={},
-          year={2024}
-  }
+@article{cheng2024navila,
+    title = {{NaVILA: Legged Robot Vision-Language-Action Model for Navigation}},
+    author = {Cheng, An-Chieh and Ji, Yandong and Yang, Zhaojing and Zou, Xueyan and Kautz, Jan and Biyik, Erdem and Yin,
+    Hongxu and Liu, Sifei and Wang, Xiaolong},
+    journal = {arXiv preprint arXiv:2412.04453},
+    year={2024},
+}
   </code></pre>
         </div>
     </section>
 
 
     </div>
-<script>
-    function toggleGalleryVideos() {
-        const moreVideos = document.getElementById('videoGalleryMore');
-        const icon = document.getElementById('galleryIcon');
-        const text = document.getElementById('galleryBtnText');
+    <script>
+        function toggleGalleryVideos() {
+            const moreVideos = document.getElementById('videoGalleryMore');
+            const icon = document.getElementById('galleryIcon');
+            const text = document.getElementById('galleryBtnText');
 
-        if (moreVideos.style.display === 'block') {
-            // Collapse
-            moreVideos.style.display = 'none';
-            text.innerHTML = 'Show More';
-            icon.className = 'fas fa-chevron-down';
-            // Pause hidden videos to save resources
-            moreVideos.querySelectorAll('video').forEach(video => video.pause());
-        } else {
-            // Expand
-            moreVideos.style.display = 'block';
-            text.innerHTML = 'Show Less';
-            icon.className = 'fas fa-dog';
-            // Play newly visible videos
-            moreVideos.querySelectorAll('video').forEach(video => {
-                video.play().catch(e => console.log("Autoplay prevented:", e));
-            });
+            if (moreVideos.style.display === 'block') {
+                // Collapse
+                moreVideos.style.display = 'none';
+                text.innerHTML = 'Show More';
+                icon.className = 'fas fa-chevron-down';
+                // Pause hidden videos to save resources
+                moreVideos.querySelectorAll('video').forEach(video => video.pause());
+            } else {
+                // Expand
+                moreVideos.style.display = 'block';
+                text.innerHTML = 'Show Less';
+                icon.className = 'fas fa-dog';
+                // Play newly visible videos
+                moreVideos.querySelectorAll('video').forEach(video => {
+                    video.play().catch(e => console.log("Autoplay prevented:", e));
+                });
+            }
         }
-    }
 
-                    // Handle video visibility
+        // Handle video visibility
         document.addEventListener('DOMContentLoaded', function () {
             // Initially hide the "more videos" section
             const moreVideos = document.getElementById('videoGalleryMore');
@@ -814,7 +823,7 @@
                                 console.log("Autoplay prevented:", e);
                             });
                         } else {
-                        // Pause when out of view
+                            // Pause when out of view
                             entry.target.pause();
                         }
                     }
@@ -830,7 +839,7 @@
                 }
             });
         });
-</script>
+    </script>
 </body>
 
 </html>
