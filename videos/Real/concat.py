@@ -194,12 +194,12 @@ def concat_videos_grid(
 # Example usage
 if __name__ == "__main__":
     video_paths = [
-        "./go2/1_1.mp4",
-        "./go2/2_1.mp4",
-        "./go2/3_1.mp4",
-        "./go2/4_1.mp4",
-        "./go2/5_1.mp4",
-        "./go2/6_1.mp4",
+        # "./go2/1_1.mp4",
+        # "./go2/2_1.mp4",
+        # "./go2/3_1.mp4",
+        # "./go2/4_1.mp4",
+        # "./go2/5_1.mp4",
+        # "./go2/6_1.mp4",
         "./go2/7_1.mp4",
         "./go2/8_1.mp4",
         "./go2/9_1.mp4",
@@ -215,7 +215,7 @@ if __name__ == "__main__":
     try:
         concat_videos_grid(
             video_paths=video_paths,
-            output_path="output_grid.mp4",
+            output_path="output_grid_1.mp4",
             x_padding=10,
             y_padding=10,
             corner_radius=0,
