@@ -201,7 +201,7 @@
                             </span></h1>
 
                         <div class="is-size-5 publication-authors">
-                            <!-- First Group of 5 Authors -->
+                            <!-- First Group of 4 Authors -->
                             <div class="author-group">
                                 <span class="author-block">
                                     <a href="https://www.anjiecheng.me"
@@ -376,25 +376,10 @@
                 </h2>
             </div>
         </div>
-        <div class="container is-max-desktop" style="max-width: 1200px;">
-            <div class="columns is-centered">
-        
-                <div class="column is-full-width">
-                    <div class="content has-text-justified">
-                        <tr>
-                            <td>
-                                <div class="row g-1">
-                                    <div class="col px-1">
-                                        <video playsinline autoplay loop muted controls src="videos/Real/output_grid_1.mp4"
-                                            width="100%"></video>
-                                    </div>
-                                </div>
-                                <br>
-                                </td>
-                                </tr>
-                                </div>
-                                </div>
-                                </div>
+        <div class="columns is-centered has-text-centered">
+            <video src="videos/Real/output_grid_1.mp4" width="1200px" autoplay muted loop> </video>
+        </div>
+
     </section>
 
     <section class="section">
@@ -461,8 +446,7 @@
                             <td>
                                 <div class="row g-1">
                                     <div class="col px-1">
-                                        <video playsinline autoplay loop muted controls src="videos/human/output_grid_1.mp4"
-                                            width="100%" style="border-radius:2px; "></video>
+                                        <video playsinline autoplay loop muted controls src="videos/human/output_grid_1.mp4" width="100%"></video>
                                     </div>
                                 </div>
 
@@ -668,10 +652,6 @@
         </div>
     </section>
 
-
-
-
-
     <style>
         #BibTeX {
             margin-bottom: -80px;
@@ -700,64 +680,18 @@
     </section>
 
 
-    </div>
-    <script>
-        function toggleGalleryVideos() {
-            const moreVideos = document.getElementById('videoGalleryMore');
-            const icon = document.getElementById('galleryIcon');
-            const text = document.getElementById('galleryBtnText');
+    <section class="section" id="Acknowledgement">
+        <div class="container is-max-desktop content">
+            <h2 class="title">Acknowledgement</h2>
+            <p>
+            </p>
+        </div>
+    </section>
 
-            if (moreVideos.style.display === 'block') {
-                // Collapse
-                moreVideos.style.display = 'none';
-                text.innerHTML = 'Show More';
-                icon.className = 'fas fa-chevron-down';
-                // Pause hidden videos to save resources
-                moreVideos.querySelectorAll('video').forEach(video => video.pause());
-            } else {
-                // Expand
-                moreVideos.style.display = 'block';
-                text.innerHTML = 'Show Less';
-                icon.className = 'fas fa-dog';
-                // Play newly visible videos
-                moreVideos.querySelectorAll('video').forEach(video => {
-                    video.play().catch(e => console.log("Autoplay prevented:", e));
-                });
-            }
-        }
 
-        // Handle video visibility
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initially hide the "more videos" section
-            const moreVideos = document.getElementById('videoGalleryMore');
-            moreVideos.style.display = 'none';
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.target.tagName === 'VIDEO') {
-                        if (entry.isIntersecting) {
-                            // Play video when it becomes visible
-                            entry.target.play().catch(e => {
-                                console.log("Autoplay prevented:", e);
-                            });
-                        } else {
-                            // Pause when out of view
-                            entry.target.pause();
-                        }
-                    }
-                });
-            });
+    <!-- </div> -->
 
-            // Start observing all videos
-            document.querySelectorAll('video').forEach(video => {
-                observer.observe(video);
-                // If video is currently visible, play it
-                if (video.getBoundingClientRect().top < window.innerHeight) {
-                    video.play().catch(e => console.log("Initial autoplay prevented:", e));
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
