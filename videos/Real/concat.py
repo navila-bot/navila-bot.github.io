@@ -215,7 +215,7 @@ if __name__ == "__main__":
     try:
         concat_videos_grid(
             video_paths=video_paths,
-            output_path="output_grid_1.mp4",
+            output_path="output_grid_2.mp4",
             x_padding=10,
             y_padding=10,
             corner_radius=0,
