@@ -59,41 +59,6 @@
         content-visibility: auto; /* Defer off-screen content */
     }
 
-    .video-gallery-hidden {
-        display: none;
-    }
-
-    .video-gallery-visible {
-        display: block;
-    }
-
-    .video-gallery-btn {
-        display: block;
-        margin: 20px auto;
-        padding: 10px 20px;
-        background-color: #4a4a4a;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .video-gallery-btn:hover {
-        background-color: #363636;
-    }
-
-    .video-gallery-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 10px;
-    }
-
-    .video-gallery-col {
-        flex: 1;
-        min-width: 300px;
-    }
-
     .section {
         margin-bottom: -30px;
         /* Adjust this value as needed to reduce the space */
@@ -376,8 +341,12 @@
                 </h2>
             </div>
         </div>
-        <div class="columns is-centered has-text-centered">
-            <video src="videos/Real/output_grid_1.mp4" width="1200px" autoplay muted loop> </video>
+        <div class="container is-max-desktop" style="max-width: 1200px;">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <video src="videos/Real/output_grid_1.mp4" width="100%" autoplay muted loop playsinline>
+                </div>
+                </div>
         </div>
 
     </section>
